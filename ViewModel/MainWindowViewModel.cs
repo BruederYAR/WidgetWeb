@@ -37,9 +37,20 @@ namespace WidgetWeb.ViewModel
         public MainWindowViewModel(MainWindow mainWindow) : this()
         {
             if(model.HiddenUpPanel)
+            {
                 mainWindow.WindowStyle = WindowStyle.None;
+                mainWindow.ResizeMode = ResizeMode.NoResize;
+            }
             else
+            {
                 mainWindow.WindowStyle = WindowStyle.ToolWindow;
+                mainWindow.ResizeMode = ResizeMode.CanResizeWithGrip;
+            }
+
+            mainWindow.Top = model.Top;
+            mainWindow.Left = model.Left;
+            mainWindow.Height = model.Height;
+            mainWindow.Width = model.Width;
         }
 
 
@@ -59,6 +70,7 @@ namespace WidgetWeb.ViewModel
             NotifyPropertyChanged();
         }
 
+        #region Animated
         private double frameOpacity;
         public double FrameOpacity
         {
@@ -82,5 +94,6 @@ namespace WidgetWeb.ViewModel
                 }
             });
         }
+        #endregion
     }
 }

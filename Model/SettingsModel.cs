@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.Json;
+using System.Windows;
 
 namespace WidgetWeb.Model
 {
@@ -13,8 +14,18 @@ namespace WidgetWeb.Model
         public bool HiddenUpPanel { get; set; }
         public string Address { get; set; }
 
+        public double Top { get; set; }
+        public double Left { get; set; }
+        public double Height { get; set; }
+        public double Width { get; set; }
+
         public void Save()
         {
+            Top = (Application.Current.MainWindow as MainWindow).Top;
+            Left = (Application.Current.MainWindow as MainWindow).Left;
+            Height = (Application.Current.MainWindow as MainWindow).ActualHeight;
+            Width = (Application.Current.MainWindow as MainWindow).ActualWidth;
+
             string json = JsonSerializer.Serialize(this);
 
             using (StreamWriter sw = new StreamWriter(Path))

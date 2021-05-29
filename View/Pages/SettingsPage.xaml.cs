@@ -31,12 +31,14 @@ namespace WidgetWeb.View.Pages
         private void HiddenUpPanelCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             (Application.Current.MainWindow as MainWindow).WindowStyle = WindowStyle.None;
+            (Application.Current.MainWindow as MainWindow).ResizeMode = ResizeMode.NoResize;
             viewModel.HiddenUpPanel = true;
         }
 
         private void HiddenUpPanelCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
             (Application.Current.MainWindow as MainWindow).WindowStyle = WindowStyle.ToolWindow;
+            (Application.Current.MainWindow as MainWindow).ResizeMode = ResizeMode.CanResizeWithGrip;
             viewModel.HiddenUpPanel = false;
         }
     }

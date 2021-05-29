@@ -31,6 +31,7 @@ namespace WidgetWeb
             InitializeComponent();
             viewModel = new MainWindowViewModel(this);
             this.DataContext = viewModel;
+            
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)

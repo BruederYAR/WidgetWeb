@@ -17,7 +17,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CefSharp.Wpf" Version="89.0.170" />
+    <None Remove="Infrastructure\Resourses\main_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CefSharp.Wpf" Version="90.6.50" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Infrastructure\Resourses\main_icon.ico" />
   </ItemGroup>
 
 </Project>
