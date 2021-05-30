@@ -12,11 +12,13 @@
         Height="450" Width="800"
         MinHeight="100" MinWidth="100"
         KeyDown="Window_KeyDown"
-        Icon="/Infrastructure/Resourses/main_icon.ico">
+
+        Icon="/Infrastructure/Resources/main_icon.ico">
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
+    
     
     <Frame x:Name="frame" 
            NavigationUIVisibility="Hidden" 

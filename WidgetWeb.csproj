@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿ <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
@@ -6,6 +6,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -17,7 +18,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Infrastructure\Resourses\main_icon.ico" />
+    <None Remove="Infrastructure\Resources\main_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Infrastructure\Resourses\main_icon.ico" />
+    <Resource Include="Infrastructure\Resources\main_icon.ico" />
   </ItemGroup>
 
 </Project>

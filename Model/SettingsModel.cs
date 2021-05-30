@@ -50,7 +50,8 @@ namespace WidgetWeb.Model
 
                 return JsonSerializer.Deserialize<SettingsModel>(json, jsonSerializerOptions);
             }
-            return new SettingsModel();
+            else
+                return new SettingsModel() { Address = "https://google.com", Height = 500, Width = 500, Left = 0, Top = 0, HiddenUpPanel = false };
         }
     }
 }
