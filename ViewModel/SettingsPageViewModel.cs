@@ -25,7 +25,7 @@ namespace WidgetWeb.ViewModel
         public bool HiddenUpPanel { get; set; }
 
         private string address;
-        public string Address
+        public string Address //Изменение адресной строки
         {
             get { return address; }
             set
@@ -42,7 +42,7 @@ namespace WidgetWeb.ViewModel
 
         
         public ICommand SaveSettingsCommand { get; }
-        private void OnSaveSettingsCommand(object p)
+        private void OnSaveSettingsCommand(object p) //Команда для сохранения настроек
         {
             model = new SettingsModel();
             model.Address = this.Address ?? "https://google.com";

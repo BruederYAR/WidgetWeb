@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace WidgetWeb.Infrastructure.Commands
 {
-    internal abstract class Command : ICommand
+    internal abstract class Command : ICommand //Основной класс команд. CanExecute для проверки запуска команды. Execute выполнение команды
     {
         public event EventHandler CanExecuteChanged
         {

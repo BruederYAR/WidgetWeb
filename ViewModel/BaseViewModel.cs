@@ -6,7 +6,7 @@ using System.Text;
 
 namespace WidgetWeb.ViewModel
 {
-    public abstract class BaseViewModel : INotifyPropertyChanged
+    public abstract class BaseViewModel : INotifyPropertyChanged //Базовый клас для viewmodels. NotifyPropertyChanged для обновления view
     {
         protected bool CanStandartCommandExecute(object p) => true;
         public event PropertyChangedEventHandler PropertyChanged;

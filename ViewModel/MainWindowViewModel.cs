@@ -28,14 +28,15 @@ namespace WidgetWeb.ViewModel
 
         private SettingsModel model = SettingsModel.Read();
 
-        public MainWindowViewModel()
+        public MainWindowViewModel() //Конструктор для xaml
         {
             CurretPage = browserPage;
             FrameOpacity = 1;
 
         }
-        public MainWindowViewModel(MainWindow mainWindow) : this()
+        public MainWindowViewModel(MainWindow mainWindow) : this() //Конструктор для cs
         {
+            //Чтение и применение настроек
             if(model.HiddenUpPanel)
             {
                 mainWindow.WindowStyle = WindowStyle.None;
@@ -54,7 +55,7 @@ namespace WidgetWeb.ViewModel
         }
 
 
-        public void TurnPage()
+        public void TurnPage() //Смена страниц
         {
             if (CurretPage == browserPage)
             {
@@ -77,7 +78,7 @@ namespace WidgetWeb.ViewModel
             get { return frameOpacity; }
             set { frameOpacity = value; NotifyPropertyChanged(nameof(FrameOpacity)); }
         }
-        private async void PageAnimated(Page page)
+        private async void PageAnimated(Page page) //Анимация перехода
         {
             await Task.Factory.StartNew(() =>
             {
